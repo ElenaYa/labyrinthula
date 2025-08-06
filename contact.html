@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie Labyrinthula Deutschkurse. Standort Berlin, kostenlose Beratung, Einstufungstest und Kursanmeldung.">
+    <meta name="keywords" content="Kontakt, Deutschkurs Berlin, Anmeldung, Beratung, Sprachschule Kontakt">
+    <title>Kontakt - Labyrinthula Deutschkurse Berlin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Labyrinthula</span>
+                <span class="logo-subtitle">Deutschkurse</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="courses.html">Kurse</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Kontakt</h1>
+            <p class="lead">Wir sind für Sie da - persönlich, telefonisch oder online</p>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-section">
+                    <h2>Kontaktinformationen</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Adresse</h3>
+                            <p>Friedrichstraße 123<br>
+                            10117 Berlin<br>
+                            Deutschland</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>+49 30 12345678<br>
+                            Mo-Fr: 9:00-18:00 Uhr<br>
+                            Sa: 10:00-14:00 Uhr</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>E-Mail</h3>
+                            <p>info@labyrinthula.com<br>
+                            kurse@labyrinthula.com<br>
+                            beratung@labyrinthula.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🚇</div>
+                        <div class="contact-details">
+                            <h3>Anfahrt</h3>
+                            <p>U-Bahn: U6 Friedrichstraße<br>
+                            S-Bahn: S1, S2, S25 Friedrichstraße<br>
+                            Bus: 147, N6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Kontaktformular</h2>
+                    <p>Senden Sie uns Ihre Anfrage - wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Betreff *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Bitte wählen...</option>
+                                <option value="beratung">Kostenlose Beratung</option>
+                                <option value="einstufung">Einstufungstest</option>
+                                <option value="anmeldung">Kursanmeldung</option>
+                                <option value="info">Allgemeine Informationen</option>
+                                <option value="firmen">Firmenkurse</option>
+                                <option value="andere">Andere Anfrage</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level">Aktuelles Deutschniveau</label>
+                            <select id="level" name="level">
+                                <option value="">Nicht sicher / Keine Kenntnisse</option>
+                                <option value="a1">A1 - Anfänger</option>
+                                <option value="a2">A2 - Grundkenntnisse</option>
+                                <option value="b1">B1 - Mittelstufe</option>
+                                <option value="b2">B2 - Gute Mittelstufe</option>
+                                <option value="c1">C1 - Fortgeschritten</option>
+                                <option value="c2">C2 - Experte</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span>Ich möchte den Newsletter erhalten</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Standort</h2>
+            <p class="section-subtitle">Besuchen Sie uns in Berlin-Mitte</p>
+            
+            <div class="map-placeholder">
+                [Interaktive Karte: Friedrichstraße 123, 10117 Berlin]
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours -->
+    <section class="opening-hours">
+        <div class="container">
+            <h2 class="section-title">Öffnungszeiten</h2>
+            <p class="section-subtitle">Büro und Beratungszeiten</p>
+            
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>Sekretariat</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag:</span> <strong>9:00 - 18:00 Uhr</strong></li>
+                        <li><span>Samstag:</span> <strong>10:00 - 14:00 Uhr</strong></li>
+                        <li><span>Sonntag:</span> <strong>Geschlossen</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="hours-card">
+                    <h3>Kurszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Vormittagskurse:</span> <strong>9:00 - 12:15 Uhr</strong></li>
+                        <li><span>Nachmittagskurse:</span> <strong>14:00 - 17:15 Uhr</strong></li>
+                        <li><span>Abendkurse:</span> <strong>18:00 - 21:15 Uhr</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="hours-card">
+                    <h3>Telefonische Beratung</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag:</span> <strong>9:00 - 18:00 Uhr</strong></li>
+                        <li><span>Samstag:</span> <strong>10:00 - 14:00 Uhr</strong></li>
+                        <li><span>Hotline:</span> <strong>+49 30 12345678</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Häufige Fragen</h2>
+            <p class="section-subtitle">Antworten auf Ihre wichtigsten Fragen</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Wie kann ich mein Deutschniveau testen?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Wir bieten einen kostenlosen Online-Einstufungstest an, der etwa 30 Minuten dauert. Alternativ können Sie einen persönlichen Termin für einen mündlichen Test vereinbaren. Nach dem Test erhalten Sie eine detaillierte Auswertung und Kursempfehlung.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Wann starten die nächsten Kurse?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Neue Kurse starten jeden Monat. Intensivkurse beginnen alle zwei Wochen. Bei ausreichenden Vorkenntnissen ist ein Quereinstieg in laufende Kurse jederzeit möglich. Kontaktieren Sie uns für aktuelle Starttermine.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Gibt es eine Probestunde?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, Sie können gerne eine kostenlose Probestunde vereinbaren. So lernen Sie unsere Lehrmethoden und Lehrkräfte kennen, bevor Sie sich für einen Kurs entscheiden.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Welche Lehrmaterialien werden verwendet?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Wir arbeiten mit aktuellen Lehrwerken renommierter Verlage und ergänzen diese durch eigene Materialien. Zusätzlich haben Sie Zugang zu unserer Online-Lernplattform mit interaktiven Übungen und Zusatzmaterialien.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Bieten Sie auch Online-Kurse an?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, wir bieten komplette Online-Kurse sowie Hybrid-Modelle an. Unsere Online-Kurse finden live per Videokonferenz statt und bieten die gleiche Qualität und Interaktion wie Präsenzkurse.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Erhalte ich ein Zertifikat?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nach erfolgreichem Kursabschluss erhalten Sie ein Teilnahmezertifikat mit Angabe des Niveaus und der Unterrichtsstunden. Wir bereiten Sie auch auf offizielle Prüfungen wie Goethe-Zertifikate oder TELC vor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Kostenlose Beratung</h2>
+                <p>Vereinbaren Sie noch heute Ihren persönlichen Beratungstermin</p>
+                <a href="#contactForm" class="btn btn-white">Termin vereinbaren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Labyrinthula</h3>
+                    <p>Ihre professionelle Sprachschule für Deutschkurse. Wir begleiten Sie auf Ihrem Weg zur deutschen Sprache.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Schnelllinks</h4>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="courses.html">Kurse</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <p>📍 Friedrichstraße 123<br>
+                    10117 Berlin<br>
+                    📞 +49 30 12345678<br>
+                    ✉️ info@labyrinthula.com</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Labyrinthula. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
