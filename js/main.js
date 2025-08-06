@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== Animate Numbers on Scroll =====
     const animateNumbers = () => {
-        const numbers = document.querySelectorAll('.stat-number');
+        const numbers = document.querySelectorAll('.stat-number[data-target]');
         
         numbers.forEach(number => {
-            const target = parseInt(number.innerText.replace(/\D/g, ''));
+            const target = parseInt(number.getAttribute('data-target'));
             if (isNaN(target)) return;
             
             const observer = new IntersectionObserver((entries) => {
@@ -123,15 +123,104 @@ document.addEventListener('DOMContentLoaded', function() {
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-                element.innerText = target + (element.innerText.includes('+') ? '+' : '');
+                element.textContent = target + (element.hasAttribute('data-suffix') ? element.getAttribute('data-suffix') : '') + (target === parseInt(element.getAttribute('data-target')) ? '+' : '');
                 clearInterval(timer);
             } else {
-                element.innerText = Math.floor(current) + (element.innerText.includes('+') ? '+' : '');
+                element.textContent = Math.floor(current) + (element.hasAttribute('data-suffix') ? element.getAttribute('data-suffix') : '');
             }
         }, 16);
     }
     
     animateNumbers();
+    
+    // ===== Methods Slider =====
+    const methodsWrapper = document.getElementById('methodsWrapper');
+    
+    // Only initialize slider if the elements exist
+    if (methodsWrapper) {
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const navDots = document.querySelectorAll('.nav-dot');
+        let currentSlide = 0;
+        const totalSlides = 4;
+        let sliderInterval;
+        
+        function updateSlider() {
+            const translateX = -(currentSlide * 25);
+            methodsWrapper.style.transform = `translateX(${translateX}%)`;
+            
+            // Update nav dots
+            navDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                // Reset interval when manually navigating
+                clearInterval(sliderInterval);
+                sliderInterval = setInterval(nextSlide, 5000);
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                // Reset interval when manually navigating
+                clearInterval(sliderInterval);
+                sliderInterval = setInterval(nextSlide, 5000);
+            });
+        }
+        
+        // Nav dots click handlers
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+                // Reset interval when manually navigating
+                clearInterval(sliderInterval);
+                sliderInterval = setInterval(nextSlide, 5000);
+            });
+        });
+        
+        // Start auto-play slider
+        sliderInterval = setInterval(nextSlide, 5000);
+        
+        // Pause slider on hover
+        methodsWrapper.addEventListener('mouseenter', () => {
+            clearInterval(sliderInterval);
+        });
+        
+        // Resume slider when mouse leaves
+        methodsWrapper.addEventListener('mouseleave', () => {
+            sliderInterval = setInterval(nextSlide, 5000);
+        });
+    }
+    
+    // ===== Features Hover Effect =====
+    const features = document.querySelectorAll('.feature-item');
+    
+    features.forEach(feature => {
+        feature.addEventListener('mousemove', (e) => {
+            const rect = feature.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / feature.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / feature.clientHeight) * 100;
+            
+            feature.style.setProperty('--mouse-x', `${x}%`);
+            feature.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
     
     // ===== Grammar Section Toggle =====
     const grammarCards = document.querySelectorAll('.grammar-card');

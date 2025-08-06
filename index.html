@@ -14,6 +14,7 @@
     <meta property="og:image" content="images/hero-image.jpg">
     <meta property="og:site_name" content="Labyrinthula Sprachschule">
     <meta name="theme-color" content="#6366F1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Labyrinthula - Deutschkurse für alle Niveaus | Online & Präsenz</title>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,8 +25,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Labyrinthula</span>
-                <span class="logo-subtitle">Deutschkurse</span>
+                <img src="images/logo-lab.png" alt="Labyrinthula Deutschkurse Logo">
             </a>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
@@ -48,6 +48,7 @@
                 <div class="hero-text">
                     <h1>Deutsch lernen mit Begeisterung</h1>
                     <p class="lead">Entdecken Sie die deutsche Sprache mit unseren professionellen Kursen. Flexibel, effektiv und auf Ihre Bedürfnisse zugeschnitten.</p>
+                    <p class="lead">Unsere erfahrenen Lehrkräfte begleiten Sie auf Ihrem Weg zum Spracherfolg. Mit modernen Lehrmethoden und individueller Betreuung erreichen Sie Ihre Sprachziele schnell und nachhaltig.</p>
                     <div class="hero-buttons">
                         <a href="courses.html" class="btn btn-primary">
                             <i class="fas fa-graduation-cap"></i> Kurse entdecken
@@ -57,8 +58,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/hero-image.jpg" alt="Deutsche Sprachklasse">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-background"></div>
+                    <div class="hero-image">
+                        <img src="images/hero-image.jpg" alt="Deutsche Sprachklasse">
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,18 +73,30 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
                     <div class="stat-label">Aktive Schüler</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-target="15">0</div>
                     <div class="stat-label">Jahre Erfahrung</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">98%</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number" data-target="98" data-suffix="%">0</div>
                     <div class="stat-label">Erfolgsquote</div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="stat-number">A1-C2</div>
                     <div class="stat-label">Alle Niveaus</div>
                 </div>
@@ -97,7 +113,12 @@
             
             <div class="course-grid">
                 <div class="course-card">
-                    <div class="course-icon">📚</div>
+                    <div class="course-image">
+                        <img src="images/beginner-course.jpg" alt="Deutschkurs für Anfänger">
+                    </div>
+                    <div class="course-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
                     <h3>Anfängerkurse (A1-A2)</h3>
                     <p>Der perfekte Einstieg in die deutsche Sprache. Grundlagen der Grammatik, Wortschatz und Alltagskommunikation.</p>
                     <ul class="course-features">
@@ -109,7 +130,12 @@
                 </div>
                 
                 <div class="course-card">
-                    <div class="course-icon">🎯</div>
+                    <div class="course-image">
+                        <img src="images/intermediate-course.jpg" alt="Deutschkurs Mittelstufe">
+                    </div>
+                    <div class="course-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <h3>Mittelstufe (B1-B2)</h3>
                     <p>Vertiefen Sie Ihre Kenntnisse und erreichen Sie fließende Kommunikation in beruflichen und privaten Kontexten.</p>
                     <ul class="course-features">
@@ -121,7 +147,12 @@
                 </div>
                 
                 <div class="course-card">
-                    <div class="course-icon">🏆</div>
+                    <div class="course-image">
+                        <img src="images/advanced-course.jpg" alt="Deutschkurs für Fortgeschrittene">
+                    </div>
+                    <div class="course-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
                     <h3>Fortgeschritten (C1-C2)</h3>
                     <p>Perfektionieren Sie Ihr Deutsch für akademische und professionelle Zwecke auf höchstem Niveau.</p>
                     <ul class="course-features">
@@ -145,30 +176,38 @@
             <div class="course-grid">
                 <div class="process-card">
                     <div class="process-number">1</div>
-                    <div class="process-icon">📚</div>
+                    <div class="process-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
                     <h3>Interaktive Lektionen</h3>
-                    <p>Lernen Sie mit Videos, Audio und interaktiven Übungen, die alle Sinne ansprechen</p>
+                    <p>Lernen Sie mit modernsten Methoden: Video-Tutorials, Audio-Übungen, interaktive Aufgaben und Live-Online-Sessions. Unser multimediales Konzept spricht alle Lerntypen an und macht den Spracherwerb effektiv und unterhaltsam.</p>
                 </div>
                 
                 <div class="process-card">
                     <div class="process-number">2</div>
-                    <div class="process-icon">💬</div>
+                    <div class="process-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
                     <h3>Praktische Anwendung</h3>
-                    <p>Üben Sie mit Muttersprachlern und anderen Lernenden in realen Situationen</p>
+                    <p>Trainieren Sie Ihre Sprachkenntnisse in authentischen Situationen mit erfahrenen Muttersprachlern. Regelmäßige Konversationsrunden, Rollenspiele und kulturelle Aktivitäten helfen Ihnen, die Sprache natürlich und selbstbewusst anzuwenden.</p>
                 </div>
                 
                 <div class="process-card">
                     <div class="process-number">3</div>
-                    <div class="process-icon">✅</div>
+                    <div class="process-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
                     <h3>Fortschrittskontrolle</h3>
-                    <p>Testen Sie Ihr Wissen mit herausfordernden Übungen und erhalten Sie Feedback</p>
+                    <p>Verfolgen Sie Ihren Lernfortschritt mit unserem intelligenten Bewertungssystem. Regelmäßige Tests, detailliertes Feedback und personalisierte Empfehlungen helfen Ihnen, Ihre Ziele schneller zu erreichen. Unsere Lernanalysen zeigen Ihnen genau, wo Sie stehen.</p>
                 </div>
                 
                 <div class="process-card">
                     <div class="process-number">4</div>
-                    <div class="process-icon">🎯</div>
+                    <div class="process-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
                     <h3>Zertifizierung</h3>
-                    <p>Erhalten Sie anerkannte Zertifikate für Ihren beruflichen und persönlichen Erfolg</p>
+                    <p>Schließen Sie Ihren Kurs mit international anerkannten Zertifikaten ab. Unsere Prüfungsvorbereitung und Qualifikationen entsprechen dem Gemeinsamen Europäischen Referenzrahmen (GER) und werden von Arbeitgebern und Bildungseinrichtungen weltweit anerkannt.</p>
                 </div>
             </div>
         </div>
@@ -181,26 +220,74 @@
             <div class="section-title-divider"></div>
             <p class="section-subtitle">Lernen Sie, wie es zu Ihrem Leben passt</p>
             
-            <div class="methods-grid">
-                <div class="method-card">
-                    <div class="method-icon">💻</div>
-                    <h3>Online-Kurse</h3>
-                    <p>Lernen Sie bequem von zu Hause aus mit interaktiven Live-Unterricht und flexiblen Zeiten.</p>
+            <div class="methods-slider">
+                <div class="methods-wrapper" id="methodsWrapper">
+                    <div class="method-slide">
+                        <div class="method-image">
+                            <img src="images/online-learning.jpg" alt="Online Deutschkurs mit interaktivem Unterricht">
+                        </div>
+                        <div class="method-content">
+                            <div class="method-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h3>Online-Kurse</h3>
+                            <p>Lernen Sie bequem von zu Hause aus mit interaktiven Live-Unterricht und flexiblen Zeiten. Modernste Lernplattform mit Video-Konferenzen, digitalen Materialien und individueller Betreuung.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-slide">
+                        <div class="method-image">
+                            <img src="images/group-learning.jpg" alt="Deutschkurs in kleiner Gruppe">
+                        </div>
+                        <div class="method-content">
+                            <div class="method-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Gruppenkurse</h3>
+                            <p>Lernen Sie in kleinen Gruppen von 4-8 Personen für optimale Interaktion und persönliche Betreuung. Profitieren Sie vom Austausch mit anderen Lernenden und genießen Sie die motivierende Atmosphäre.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-slide">
+                        <div class="method-image">
+                            <img src="images/private-tutoring.jpg" alt="Individueller Deutschunterricht">
+                        </div>
+                        <div class="method-content">
+                            <div class="method-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Einzelunterricht</h3>
+                            <p>Genießen Sie maßgeschneiderten Unterricht, der sich ganz auf Ihre individuellen Bedürfnisse konzentriert. Flexibler Zeitplan, persönliche Lernziele und intensive Betreuung für maximalen Lernerfolg.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="method-slide">
+                        <div class="method-image">
+                            <img src="images/business-german.jpg" alt="Deutscher Sprachkurs für Unternehmen">
+                        </div>
+                        <div class="method-content">
+                            <div class="method-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Firmenkurse</h3>
+                            <p>Maßgeschneiderte Sprachprogramme für Unternehmen und ihre Mitarbeiter. Branchenspezifische Inhalte, flexible Formate und professionelle Business-Kommunikation für den beruflichen Erfolg.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">👥</div>
-                    <h3>Gruppenkurse</h3>
-                    <p>Kleine Gruppen von 4-8 Personen für optimale Interaktion und persönliche Betreuung.</p>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">👤</div>
-                    <h3>Einzelunterricht</h3>
-                    <p>Maßgeschneiderter Unterricht, der sich ganz auf Ihre individuellen Bedürfnisse konzentriert.</p>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">🏢</div>
-                    <h3>Firmenkurse</h3>
-                    <p>Speziell entwickelte Programme für Unternehmen und ihre Mitarbeiter.</p>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-nav" id="sliderNav">
+                        <span class="nav-dot active" data-slide="0"></span>
+                        <span class="nav-dot" data-slide="1"></span>
+                        <span class="nav-dot" data-slide="2"></span>
+                        <span class="nav-dot" data-slide="3"></span>
+                    </div>
+                    <button class="slider-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -218,48 +305,60 @@
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Flexible Zeiten</h3>
-                    <p>Lernen Sie wann es Ihnen passt - morgens, abends oder am Wochenende</p>
+                    <div>
+                        <h3>Flexible Zeiten</h3>
+                        <p>Gestalten Sie Ihren Lernplan nach Ihren Bedürfnissen. Wir bieten Kurse von 7:00 bis 22:00 Uhr an allen Wochentagen, inklusive Wochenenden. Mit unserem flexiblen Buchungssystem können Sie Termine bis zu 24 Stunden vorher verschieben und Ihr Lernpensum an Ihren Lebensstil anpassen.</p>
+                    </div>
                 </div>
                 
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Kleine Gruppen</h3>
-                    <p>Maximale Aufmerksamkeit mit nur 6-8 Teilnehmern pro Kurs</p>
+                    <div>
+                        <h3>Kleine Gruppen</h3>
+                        <p>In unseren Minigruppen mit maximal 6-8 Teilnehmern garantieren wir intensive Sprachpraxis für jeden. Die optimale Gruppengröße ermöglicht individuelles Feedback, aktive Konversation und eine persönliche Lernatmosphäre. Jeder Teilnehmer hat durchschnittlich 15-20 Minuten aktive Sprechzeit pro Unterrichtsstunde.</p>
+                    </div>
                 </div>
                 
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-laptop"></i>
                     </div>
-                    <h3>Online & Präsenz</h3>
-                    <p>Wählen Sie zwischen Präsenzkursen und flexiblem Online-Lernen</p>
+                    <div>
+                        <h3>Online & Präsenz</h3>
+                        <p>Genießen Sie maximale Flexibilität mit unserem hybriden Lernmodell. Online-Kurse mit HD-Videoqualität und interaktiven Whiteboards oder traditioneller Präsenzunterricht in modernen Klassenräumen - Sie entscheiden! Wechseln Sie flexibel zwischen beiden Formaten und kombinieren Sie die Vorteile nach Ihren Wünschen.</p>
+                    </div>
                 </div>
                 
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Zertifiziert</h3>
-                    <p>Anerkannte Zertifikate nach europäischen Standards (GER)</p>
+                    <div>
+                        <h3>Zertifiziert</h3>
+                        <p>Unsere Kurse folgen dem Gemeinsamen Europäischen Referenzrahmen (GER) und bereiten optimal auf offizielle Prüfungen vor. Wir sind zertifiziertes Prüfungszentrum für TestDaF, telc und Goethe-Zertifikate. Unsere Abschlüsse werden von Universitäten und Arbeitgebern weltweit anerkannt.</p>
+                    </div>
                 </div>
                 
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Persönliche Betreuung</h3>
-                    <p>Individuelle Unterstützung durch erfahrene Muttersprachler</p>
+                    <div>
+                        <h3>Persönliche Betreuung</h3>
+                        <p>Profitieren Sie von unserem Mentoring-System mit persönlichem Lerncoach. Regelmäßige Fortschrittsgespräche, individualisierte Lernpläne und zusätzliche Übungsmaterialien helfen Ihnen, Ihre Ziele schneller zu erreichen. Unsere Muttersprachler stehen Ihnen auch außerhalb des Unterrichts für Fragen zur Verfügung.</p>
+                    </div>
                 </div>
                 
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile App</h3>
-                    <p>Lernen Sie unterwegs mit unserer benutzerfreundlichen App</p>
+                    <div>
+                        <h3>Mobile App</h3>
+                        <p>Lernen Sie jederzeit und überall mit unserer preisgekrönten Lern-App. Tägliche Mikroübungen, Vokabeltrainer mit Spracherkennung, Podcast-Bibliothek und Live-Konversationsübungen in der App. Synchronisieren Sie Ihren Lernfortschritt automatisch zwischen allen Geräten und bleiben Sie auch offline produktiv.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -401,7 +500,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h3>Labyrinthula</h3>
+                    <a href="index.html" class="logo">
+                        <img src="images/logo-lab.png" alt="Labyrinthula Deutschkurse Logo">
+                    </a>
                     <p>Ihre professionelle Sprachschule für Deutschkurse. Wir begleiten Sie auf Ihrem Weg zur deutschen Sprache.</p>
                 </div>
                 <div class="footer-column">
@@ -417,7 +518,7 @@
                     <h4>Kontakt</h4>
                     <p>📍 Friedrichstraße 123<br>
                     10117 Berlin<br>
-                    📞 +49 30 12345678<br>
+                    📞 +49 30 47645645<br>
                     ✉️ info@labyrinthula.com</p>
                 </div>
                 <div class="footer-column">
