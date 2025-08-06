@@ -222,6 +222,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== Timeline Animation =====
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    function animateTimeline() {
+        timelineItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, index * 200 + 200);
+        });
+    }
+    
+    // Запуск анимации при загрузке
+    if (timelineItems.length > 0) {
+        animateTimeline();
+    }
+    
+    // ===== Method Cards Hover Effect =====
+    const methodCards = document.querySelectorAll('.method-detail-card');
+    
+    methodCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+            
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+    
     // ===== Grammar Section Toggle =====
     const grammarCards = document.querySelectorAll('.grammar-card');
     grammarCards.forEach(card => {
