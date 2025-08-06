@@ -1,8 +1,6 @@
-// ===== Main JavaScript for Labyrinthula =====
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== Mobile Navigation Toggle =====
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -10,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             
-            // Animate hamburger menu
             const spans = navToggle.querySelectorAll('span');
             if (navMenu.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translateY(10px)';
@@ -23,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
@@ -35,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== Smooth Scroll for Anchor Links =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -49,50 +44,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Contact Form Handler =====
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = new FormData(contactForm);
             const data = {};
             formData.forEach((value, key) => {
                 data[key] = value;
             });
             
-            // Here you would normally send the data to a server
-            console.log('Form submitted:', data);
             
-            // Show success message
             showNotification('Vielen Dank für Ihre Nachricht! Wir melden uns innerhalb von 24 Stunden bei Ihnen.');
             
-            // Reset form
             contactForm.reset();
         });
     }
     
-    // ===== FAQ Accordion =====
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         if (question) {
             question.addEventListener('click', function() {
-                // Close other items
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
                 
-                // Toggle current item
                 item.classList.toggle('active');
             });
         }
     });
     
-    // ===== Animate Numbers on Scroll =====
     const animateNumbers = () => {
         const numbers = document.querySelectorAll('.stat-number[data-target]');
         
@@ -115,9 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     function animateCount(element, target) {
-        const duration = 2000; // 2 seconds
+        const duration = 2000; 
         const start = 0;
-        const increment = target / (duration / 16); // 60fps
+        const increment = target / (duration / 16); 
         let current = start;
         
         const timer = setInterval(() => {
@@ -133,10 +118,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     animateNumbers();
     
-    // ===== Methods Slider =====
     const methodsWrapper = document.getElementById('methodsWrapper');
     
-    // Only initialize slider if the elements exist
     if (methodsWrapper) {
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -149,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const translateX = -(currentSlide * 25);
             methodsWrapper.style.transform = `translateX(${translateX}%)`;
             
-            // Update nav dots
             navDots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
             });
@@ -168,7 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
                 nextSlide();
-                // Reset interval when manually navigating
                 clearInterval(sliderInterval);
                 sliderInterval = setInterval(nextSlide, 5000);
             });
@@ -177,38 +158,31 @@ document.addEventListener('DOMContentLoaded', function() {
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
                 prevSlide();
-                // Reset interval when manually navigating
                 clearInterval(sliderInterval);
                 sliderInterval = setInterval(nextSlide, 5000);
             });
         }
         
-        // Nav dots click handlers
         navDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentSlide = index;
                 updateSlider();
-                // Reset interval when manually navigating
                 clearInterval(sliderInterval);
                 sliderInterval = setInterval(nextSlide, 5000);
             });
         });
         
-        // Start auto-play slider
         sliderInterval = setInterval(nextSlide, 5000);
         
-        // Pause slider on hover
         methodsWrapper.addEventListener('mouseenter', () => {
             clearInterval(sliderInterval);
         });
         
-        // Resume slider when mouse leaves
         methodsWrapper.addEventListener('mouseleave', () => {
             sliderInterval = setInterval(nextSlide, 5000);
         });
     }
     
-    // ===== Features Hover Effect =====
     const features = document.querySelectorAll('.feature-item');
     
     features.forEach(feature => {
@@ -222,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Timeline Animation =====
     const timelineItems = document.querySelectorAll('.timeline-item');
     
     function animateTimeline() {
@@ -234,12 +207,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Запуск анимации при загрузке
     if (timelineItems.length > 0) {
         animateTimeline();
     }
     
-    // ===== Progress Items Hover Effect =====
     const progressItems = document.querySelectorAll('.progress-item');
     
     progressItems.forEach(item => {
@@ -253,7 +224,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Path Steps Hover Effect =====
     const pathSteps = document.querySelectorAll('.path-step');
     
     pathSteps.forEach(step => {
@@ -267,7 +237,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Special Cards Hover Effect =====
     const specialCards = document.querySelectorAll('.special-card');
     
     specialCards.forEach(card => {
@@ -281,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Level Cards Hover Effect =====
     const levelCards = document.querySelectorAll('.level-card');
     
     levelCards.forEach(card => {
@@ -295,7 +263,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Method Cards Hover Effect =====
     const methodCards = document.querySelectorAll('.method-detail-card');
     
     methodCards.forEach(card => {
@@ -309,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Grammar Section Toggle =====
     const grammarCards = document.querySelectorAll('.grammar-card');
     grammarCards.forEach(card => {
         const header = card.querySelector('.grammar-header');
@@ -317,7 +283,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (header && toggleBtn) {
             header.addEventListener('click', function() {
-                // Close other cards
                 grammarCards.forEach(otherCard => {
                     if (otherCard !== card) {
                         otherCard.classList.remove('active');
@@ -329,7 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
-                // Toggle current card
                 card.classList.toggle('active');
                 toggleBtn.classList.toggle('active');
                 
@@ -342,15 +306,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ===== Cookie Consent =====
     const cookieConsent = document.getElementById('cookieConsent');
     const acceptCookies = document.getElementById('acceptCookies');
     
-    // Show cookie consent if not already accepted
     if (cookieConsent && !localStorage.getItem('cookiesAccepted')) {
         setTimeout(() => {
             cookieConsent.style.display = 'block';
-        }, 2000); // Show after 2 seconds
+        }, 2000); 
     }
     
     if (acceptCookies) {
@@ -363,7 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== Sticky Navigation Background =====
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
@@ -377,15 +338,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== Notification Function =====
     function showNotification(message, type = 'success') {
-        // Remove existing notification if any
         const existing = document.querySelector('.notification');
         if (existing) {
             existing.remove();
         }
         
-        // Create notification element
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.innerHTML = `
@@ -395,7 +353,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         
-        // Add styles
         notification.style.cssText = `
             position: fixed;
             top: 20px;
@@ -410,10 +367,8 @@ document.addEventListener('DOMContentLoaded', function() {
             max-width: 400px;
         `;
         
-        // Add to body
         document.body.appendChild(notification);
         
-        // Close button
         const closeBtn = notification.querySelector('.notification-close');
         closeBtn.style.cssText = `
             background: none;
@@ -429,7 +384,6 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => notification.remove(), 300);
         });
         
-        // Auto remove after 5 seconds
         setTimeout(() => {
             if (notification.parentElement) {
                 notification.style.animation = 'slideOut 0.3s ease';
@@ -438,7 +392,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // ===== Add Animation Styles =====
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
@@ -482,7 +435,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
     
-    // ===== Lazy Loading for Images =====
     const lazyImages = document.querySelectorAll('img[data-src]');
     if (lazyImages.length > 0) {
         const imageObserver = new IntersectionObserver((entries) => {
@@ -499,7 +451,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lazyImages.forEach(img => imageObserver.observe(img));
     }
     
-    // ===== Form Validation Enhancement =====
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
@@ -523,13 +474,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         let errorMessage = '';
         
-        // Check if required field is empty
         if (field.hasAttribute('required') && !value) {
             isValid = false;
             errorMessage = 'Dieses Feld ist erforderlich';
         }
         
-        // Email validation
         if (type === 'email' && value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(value)) {
@@ -538,7 +487,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Phone validation
         if (type === 'tel' && value) {
             const phoneRegex = /^[\d\s\-\+\(\)]+$/;
             if (!phoneRegex.test(value)) {
@@ -547,7 +495,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Show/hide error
         showFieldError(field, isValid, errorMessage);
         
         return isValid;
@@ -583,7 +530,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ===== Scroll to Top Button =====
     const scrollButton = document.createElement('button');
     scrollButton.innerHTML = '↑';
     scrollButton.className = 'scroll-to-top';
@@ -625,7 +571,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Add hover effect to scroll button =====
     scrollButton.addEventListener('mouseenter', () => {
         scrollButton.style.transform = 'translateY(-5px)';
         scrollButton.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
@@ -637,7 +582,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== Utility function for debouncing =====
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
