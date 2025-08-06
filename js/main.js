@@ -239,6 +239,62 @@ document.addEventListener('DOMContentLoaded', function() {
         animateTimeline();
     }
     
+    // ===== Progress Items Hover Effect =====
+    const progressItems = document.querySelectorAll('.progress-item');
+    
+    progressItems.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / item.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / item.clientHeight) * 100;
+            
+            item.style.setProperty('--mouse-x', `${x}%`);
+            item.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+    
+    // ===== Path Steps Hover Effect =====
+    const pathSteps = document.querySelectorAll('.path-step');
+    
+    pathSteps.forEach(step => {
+        step.addEventListener('mousemove', (e) => {
+            const rect = step.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / step.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / step.clientHeight) * 100;
+            
+            step.style.setProperty('--mouse-x', `${x}%`);
+            step.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+    
+    // ===== Special Cards Hover Effect =====
+    const specialCards = document.querySelectorAll('.special-card');
+    
+    specialCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+            
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+    
+    // ===== Level Cards Hover Effect =====
+    const levelCards = document.querySelectorAll('.level-card');
+    
+    levelCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+            
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+    
     // ===== Method Cards Hover Effect =====
     const methodCards = document.querySelectorAll('.method-detail-card');
     
