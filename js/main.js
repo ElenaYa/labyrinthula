@@ -133,6 +133,60 @@ document.addEventListener('DOMContentLoaded', function() {
     
     animateNumbers();
     
+    // ===== Grammar Section Toggle =====
+    const grammarCards = document.querySelectorAll('.grammar-card');
+    grammarCards.forEach(card => {
+        const header = card.querySelector('.grammar-header');
+        const toggleBtn = card.querySelector('.toggle-btn');
+        
+        if (header && toggleBtn) {
+            header.addEventListener('click', function() {
+                // Close other cards
+                grammarCards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('active');
+                        const otherBtn = otherCard.querySelector('.toggle-btn');
+                        if (otherBtn) {
+                            otherBtn.classList.remove('active');
+                            otherBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                        }
+                    }
+                });
+                
+                // Toggle current card
+                card.classList.toggle('active');
+                toggleBtn.classList.toggle('active');
+                
+                if (card.classList.contains('active')) {
+                    toggleBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                } else {
+                    toggleBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                }
+            });
+        }
+    });
+    
+    // ===== Cookie Consent =====
+    const cookieConsent = document.getElementById('cookieConsent');
+    const acceptCookies = document.getElementById('acceptCookies');
+    
+    // Show cookie consent if not already accepted
+    if (cookieConsent && !localStorage.getItem('cookiesAccepted')) {
+        setTimeout(() => {
+            cookieConsent.style.display = 'block';
+        }, 2000); // Show after 2 seconds
+    }
+    
+    if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.animation = 'slideDown 0.3s ease';
+            setTimeout(() => {
+                cookieConsent.style.display = 'none';
+            }, 300);
+        });
+    }
+    
     // ===== Sticky Navigation Background =====
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -229,6 +283,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             to {
                 transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100%);
                 opacity: 0;
             }
         }

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Über Labyrinthula Deutschkurse. Erfahren Sie mehr über unsere Mission, unser Team und unsere Lehrmethoden.">
     <meta name="keywords" content="Über uns, Deutschlehrer, Sprachschule Berlin, Lehrmethoden, Team">
+    <meta name="author" content="Labyrinthula Deutschkurse">
+    <meta name="theme-color" content="#6366F1">
     <title>Über uns - Labyrinthula Deutschkurse</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,10 +26,10 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="about.html" class="active">Über uns</a></li>
-                <li><a href="courses.html">Kurse</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html"><i class="fas fa-home me-1"></i> Startseite</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle me-1"></i> Über uns</a></li>
+                <li><a href="courses.html"><i class="fas fa-book me-1"></i> Kurse</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope me-1"></i> Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -77,6 +81,7 @@
     <section class="timeline">
         <div class="container">
             <h2 class="section-title">Unsere Geschichte</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Ein Weg des kontinuierlichen Wachstums</p>
             
             <div class="timeline-container">
@@ -123,6 +128,7 @@
     <section class="team">
         <div class="container">
             <h2 class="section-title">Unser Team</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Lernen Sie unsere erfahrenen Lehrkräfte kennen</p>
             
             <div class="team-grid">
@@ -177,6 +183,7 @@
     <section class="methods">
         <div class="container">
             <h2 class="section-title">Unsere Lehrmethoden</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Moderne Ansätze für effektives Lernen</p>
             
             <div class="methods-detail">
@@ -207,6 +214,7 @@
     <section class="certifications">
         <div class="container">
             <h2 class="section-title">Zertifizierungen & Partnerschaften</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Anerkannte Qualität und Standards</p>
             
             <div class="cert-grid">
@@ -234,13 +242,58 @@
         </div>
     </section>
 
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Unsere Entwicklung</h2>
+            <div class="section-title-divider"></div>
+            <p class="section-subtitle">Die Geschichte von Labyrinthula durch die Jahre</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018</div>
+                        <h4>Der Anfang</h4>
+                        <p>Labyrinthula wurde von einer kleinen Gruppe leidenschaftlicher Deutschlehrer gegründet, die einen innovativen Ansatz zum Sprachenlernen entwickeln wollten.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h4>Digitale Transformation</h4>
+                        <p>Mit dem Beginn der Pandemie erweiterten wir schnell unser Online-Angebot und entwickelten innovative digitale Lernmethoden.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <h4>Expansion und Anerkennung</h4>
+                        <p>Erhalt der offiziellen Anerkennung als Testcenter für internationale Deutschprüfungen und Eröffnung neuer Standorte.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h4>Innovation & Zukunft</h4>
+                        <p>Launch unserer mobilen Lern-App und Integration von KI-gestützten Lerntools für personalisierte Lernerfahrungen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2>Werden Sie Teil unserer Lerngemeinschaft</h2>
                 <p>Entdecken Sie, wie wir Ihnen beim Deutschlernen helfen können</p>
-                <a href="contact.html" class="btn btn-white">Kontaktieren Sie uns</a>
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-envelope"></i> Kontaktieren Sie uns
+                </a>
             </div>
         </div>
     </section>
@@ -283,6 +336,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <div style="flex: 1;">
+                    <p>Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu.</p>
+                </div>
+                <div style="flex-shrink: 0;">
+                    <button class="btn btn-primary" id="acceptCookies">Akzeptieren</button>
+                    <a href="datenschutz.html" class="btn btn-secondary" style="margin-left: 10px;">Mehr Infos</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

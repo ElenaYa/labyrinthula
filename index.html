@@ -2,10 +2,21 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Professionelle Deutschkurse bei Labyrinthula. Online und Präsenz Sprachkurse für Anfänger bis Fortgeschrittene. Erwachsene und Kinder willkommen.">
     <meta name="keywords" content="Deutschkurs, Deutsch lernen, Sprachschule, Online Deutschkurs, Deutschunterricht, German language course">
+    <meta name="author" content="Labyrinthula Deutschkurse">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Labyrinthula - Deutsche Sprachschule">
+    <meta property="og:description" content="Professionelle Deutschkurse für alle Niveaus. Lernen Sie Deutsch auf eine interaktive und effektive Weise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labyrinthula.de">
+    <meta property="og:image" content="images/hero-image.jpg">
+    <meta property="og:site_name" content="Labyrinthula Sprachschule">
+    <meta name="theme-color" content="#6366F1">
     <title>Labyrinthula - Deutschkurse für alle Niveaus | Online & Präsenz</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,10 +33,10 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Startseite</a></li>
-                <li><a href="about.html">Über uns</a></li>
-                <li><a href="courses.html">Kurse</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home me-1"></i> Startseite</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle me-1"></i> Über uns</a></li>
+                <li><a href="courses.html"><i class="fas fa-book me-1"></i> Kurse</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope me-1"></i> Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -38,8 +49,12 @@
                     <h1>Deutsch lernen mit Begeisterung</h1>
                     <p class="lead">Entdecken Sie die deutsche Sprache mit unseren professionellen Kursen. Flexibel, effektiv und auf Ihre Bedürfnisse zugeschnitten.</p>
                     <div class="hero-buttons">
-                        <a href="courses.html" class="btn btn-primary">Kurse entdecken</a>
-                        <a href="contact.html" class="btn btn-secondary">Kostenlose Beratung</a>
+                        <a href="courses.html" class="btn btn-primary">
+                            <i class="fas fa-graduation-cap"></i> Kurse entdecken
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i> Kostenlose Beratung
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -77,6 +92,7 @@
     <section class="course-overview">
         <div class="container">
             <h2 class="section-title">Unsere Kursangebote</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Wählen Sie den perfekten Kurs für Ihre Ziele</p>
             
             <div class="course-grid">
@@ -119,10 +135,50 @@
         </div>
     </section>
 
+    <!-- Learning Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Unser Lernprozess</h2>
+            <div class="section-title-divider"></div>
+            <p class="section-subtitle">So helfen wir Ihnen beim Deutschlernen</p>
+            
+            <div class="course-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <div class="process-icon">📚</div>
+                    <h3>Interaktive Lektionen</h3>
+                    <p>Lernen Sie mit Videos, Audio und interaktiven Übungen, die alle Sinne ansprechen</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <div class="process-icon">💬</div>
+                    <h3>Praktische Anwendung</h3>
+                    <p>Üben Sie mit Muttersprachlern und anderen Lernenden in realen Situationen</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <div class="process-icon">✅</div>
+                    <h3>Fortschrittskontrolle</h3>
+                    <p>Testen Sie Ihr Wissen mit herausfordernden Übungen und erhalten Sie Feedback</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <div class="process-icon">🎯</div>
+                    <h3>Zertifizierung</h3>
+                    <p>Erhalten Sie anerkannte Zertifikate für Ihren beruflichen und persönlichen Erfolg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Learning Methods -->
     <section class="learning-methods">
         <div class="container">
             <h2 class="section-title">Flexible Lernmöglichkeiten</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Lernen Sie, wie es zu Ihrem Leben passt</p>
             
             <div class="methods-grid">
@@ -150,10 +206,70 @@
         </div>
     </section>
 
+    <!-- Features Showcase Section -->
+    <section class="features-showcase">
+        <div class="container">
+            <h2 class="section-title">Warum Labyrinthula wählen?</h2>
+            <div class="section-title-divider"></div>
+            <p class="section-subtitle">Entdecken Sie die Vorteile unseres modernen Lernansatzes</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Zeiten</h3>
+                    <p>Lernen Sie wann es Ihnen passt - morgens, abends oder am Wochenende</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Kleine Gruppen</h3>
+                    <p>Maximale Aufmerksamkeit mit nur 6-8 Teilnehmern pro Kurs</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Online & Präsenz</h3>
+                    <p>Wählen Sie zwischen Präsenzkursen und flexiblem Online-Lernen</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Zertifiziert</h3>
+                    <p>Anerkannte Zertifikate nach europäischen Standards (GER)</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Persönliche Betreuung</h3>
+                    <p>Individuelle Unterstützung durch erfahrene Muttersprachler</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Lernen Sie unterwegs mit unserer benutzerfreundlichen App</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Was unsere Schüler sagen</h2>
+            <div class="section-title-divider"></div>
             <p class="section-subtitle">Erfahrungen aus erster Hand</p>
             
             <div class="testimonial-grid">
@@ -196,13 +312,86 @@
         </div>
     </section>
 
+    <!-- Interactive Grammar Section -->
+    <section class="grammar-section">
+        <div class="container">
+            <h2 class="section-title">Deutsche Grammatik leicht gemacht</h2>
+            <div class="section-title-divider"></div>
+            <p class="section-subtitle">Entdecken Sie die Grundlagen der deutschen Grammatik mit interaktiven Beispielen</p>
+            
+            <div class="course-grid">
+                <div class="grammar-card">
+                    <div class="grammar-header">
+                        <h3>Verben</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="grammar-content">
+                        <p>Deutsche Verben sind das Herzstück jedes Satzes. Hier lernen Sie die wichtigsten Konjugationen:</p>
+                        <h5>Beispiele:</h5>
+                        <ul>
+                            <li><strong>sein:</strong> ich bin, du bist, er/sie/es ist</li>
+                            <li><strong>haben:</strong> ich habe, du hast, er/sie/es hat</li>
+                            <li><strong>gehen:</strong> ich gehe, du gehst, er/sie/es geht</li>
+                        </ul>
+                        <p><strong>Tipp:</strong> Regelmäßige Verben folgen einem festen Muster. Prägen Sie sich die Endungen ein!</p>
+                        <a href="courses.html" class="btn btn-primary mt-3">
+                            <i class="fas fa-play"></i> Verben üben
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grammar-card">
+                    <div class="grammar-header">
+                        <h3>Artikel (der, die, das)</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="grammar-content">
+                        <p>Die deutschen Artikel sind essentiell für korrektes Deutsch:</p>
+                        <h5>Die drei Artikel:</h5>
+                        <ul>
+                            <li><strong>der</strong> (maskulin): der Mann, der Hund, der Computer</li>
+                            <li><strong>die</strong> (feminin): die Frau, die Katze, die Musik</li>
+                            <li><strong>das</strong> (neutral): das Kind, das Haus, das Auto</li>
+                        </ul>
+                        <p><strong>Merkhilfe:</strong> Lernen Sie Substantive immer mit ihrem Artikel!</p>
+                        <a href="courses.html" class="btn btn-primary mt-3">
+                            <i class="fas fa-play"></i> Artikel lernen
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grammar-card">
+                    <div class="grammar-header">
+                        <h3>Satzbau</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="grammar-content">
+                        <p>Der deutsche Satzbau hat feste Regeln, die das Verstehen erleichtern:</p>
+                        <h5>Grundregel (Position 2):</h5>
+                        <ul>
+                            <li>Das konjugierte Verb steht an <strong>zweiter Position</strong></li>
+                            <li>"Ich <strong>lese</strong> jeden Tag ein Buch."</li>
+                            <li>"Jeden Tag <strong>lese</strong> ich ein Buch."</li>
+                        </ul>
+                        <p><strong>Wichtig:</strong> In Nebensätzen steht das Verb am Ende!</p>
+                        <a href="courses.html" class="btn btn-primary mt-3">
+                            <i class="fas fa-play"></i> Satzbau üben
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2>Bereit, Deutsch zu lernen?</h2>
                 <p>Starten Sie noch heute Ihre Sprachreise mit einer kostenlosen Beratung</p>
-                <a href="contact.html" class="btn btn-white">Jetzt starten</a>
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-rocket"></i> Jetzt starten
+                </a>
             </div>
         </div>
     </section>
@@ -245,6 +434,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <div style="flex: 1;">
+                    <p>Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu.</p>
+                </div>
+                <div style="flex-shrink: 0;">
+                    <button class="btn btn-primary" id="acceptCookies">Akzeptieren</button>
+                    <a href="datenschutz.html" class="btn btn-secondary" style="margin-left: 10px;">Mehr Infos</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
